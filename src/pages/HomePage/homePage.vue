@@ -40,7 +40,7 @@
         <scroller :on-refresh="refresh" :on-infinite="infinite" ref="myscroller" class="scrollerList">　　
           <ul>　　　
             <li v-for="(item,i) in arr" :key="i">　　
-              {{item.productName}}　　
+              {{item.productName + item.shopSign}}　　
             </li>
           </ul>
         </scroller>
