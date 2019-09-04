@@ -21,7 +21,7 @@ function getSendUrl() {
 const getUrl =url => getSendUrl().concat('steelPrice/queryChangepriceProductTypeCodeList/')
 const  getHomeCard3=url=>getSendUrl().concat('home/getHomeCardData3/')
 //产能采购协议列表
-const  getQueryProductionAgreement=url=>getSendUrl().concat('lookgoods/presell/queryProductionAgreement/')
+const  getQueryProductionAgreement=url=>('api/lookgoods/presell/queryProductionAgreement/')
 export {getUrl,getHomeCard3,getQueryProductionAgreement}
 
 

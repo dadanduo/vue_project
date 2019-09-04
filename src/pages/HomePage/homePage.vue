@@ -40,7 +40,7 @@
         <scroller :on-refresh="refresh" :on-infinite="infinite" ref="myscroller" class="scrollerList">　　
           <ul>　　　
             <li v-for="(item,i) in arr" :key="i">　　
-              {{item.productName + item.shopSign}}　　
+              {{item.productName       +     item.shopSign}}　　
             </li>
           </ul>
         </scroller>
@@ -83,7 +83,7 @@
         arr: [],
         noDate: false,//这是一个判断是否加载的开关
         page: 1,
-        pageSize: 10
+        pageSize: 30
 
       }
     },
