@@ -15,45 +15,58 @@ export default new Router({
     {
       path: '/demo',
       name: 'HelloWorld',
-      component:demo
-    },
-    {
-      path:'/homePage',
-      name:'homePage',
-      component:homePage,
-      meta:{
-        showFooter:true
+      component: demo,
+      meta: {
+        keepAlive: false // 不需要缓存
       }
     },
     {
-      path:'/loginPage',
-      name:'loginPage',
-      component:loginPage,
+      path: '/homePage',
+      name: 'homePage',
+      component: homePage,
+      meta: {
+        showFooter: true,
+        keepAlive: true
+      }
     },
     {
-      path:'/registerPage',
-      name:'registerPage',
-      component:registerPage
-    },{
-      path:'/search',
-      name:'Search',
-      component:Search,
-      meta:{
-        showFooter:true
+      path: '/loginPage',
+      name: 'loginPage',
+      component: loginPage,
+      meta: {
+        keepAlive: false // 不需要缓存
       }
-    },{
-      path:'/myCenterPage',
-      name:'MyCenterPage',
-      component:MyCenterPage,
-      meta:{
-        showFooter:true
+    },
+    {
+      path: '/registerPage',
+      name: 'registerPage',
+      component: registerPage,
+      meta: {
+        keepAlive: false // 不需要缓存
       }
-    },{
-      path:'/orderPage',
-      name:'OrderPage',
-      component:orderPage,
-      meta:{
-        showFooter:true
+    }, {
+      path: '/search',
+      name: 'Search',
+      component: Search,
+      meta: {
+        showFooter: true,
+        keepAlive: true
+      }
+    }, {
+      path: '/myCenterPage',
+      name: 'MyCenterPage',
+      component: MyCenterPage,
+      meta: {
+        showFooter: true,
+        keepAlive: true
+      }
+    }, {
+      path: '/orderPage',
+      name: 'OrderPage',
+      component: orderPage,
+      meta: {
+        showFooter: true,
+        keepAlive: true
       }
     }
   ]

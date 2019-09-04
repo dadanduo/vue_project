@@ -1,7 +1,12 @@
 <template>
   <div>
-    <router-view/>
-    <FooterGuide v-show="$route.meta.showFooter" ></FooterGuide>
+    <keep-alive v-if="$route.meta.keepAlive">
+      <!--这里是会被缓存的组件-->
+      <router-view/>
+    </keep-alive>
+    <router-view v-if="!$route.meta.keepAlive"/>
+    <!--这里是不会被缓存的组件-->
+    <FooterGuide v-show="$route.meta.showFooter" />
   </div>
 </template>
 
